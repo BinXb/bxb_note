@@ -385,7 +385,7 @@ npm install sortablejs --save
     <div class="list" id="list">
       <div data-id="1">1</div>
       <div data-id="2">2</div>
-      <div data-id="3">3</div>
+      <div data-id="3" class="not-sort">3</div>
       <div data-id="4">4</div>
       <div data-id="5">5</div>
       <div data-id="6">6</div>
@@ -406,6 +406,8 @@ export default {
         animation: 150,
         sort: true,
         ghostClass: "blue-background-class",
+        // 通过类名过滤不需要拖动的元素
+        filter:".not-sort",
         //拖动结束
         onEnd: function (evt) {
           console.log(evt);
