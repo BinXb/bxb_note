@@ -166,6 +166,25 @@ git config --global user.email "你的邮箱"
 // 修改本地ssh
 ssh-keygen -t rsa -C "设置的邮箱"
 
+`git修改分支名称`
+
+前提：本地分支已经同步更新远程分支
+
+1.重命名远程分支对应的本地分支
+```shell
+git branch -m oldBranchName newBranchName
+```
+
+2.删除远程分支
+```shell
+git push --delete origin oldBranchName
+```
+
+3.上传新的本地分支
+```shell
+git push origin newBranchName
+```
+
 ## Echarts 不常用但实用属性
 
 设置阴影模糊值
